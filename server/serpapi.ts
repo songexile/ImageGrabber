@@ -8,7 +8,7 @@ import path from 'path';
 dotenv.config(); // Load environment variables
 
 const API_KEY = process.env.SERP_API as string; // Ensure TypeScript sees this as a string
-console.log('API_KEY:', process.env.SERP_API);
+
 
 const app = express();
 
@@ -36,7 +36,8 @@ app.get('/api/search', async (req: Request, res: Response): Promise<void> => {
       const jsonTestData = JSON.parse(testData);
 
       // Return the test data as the response
-      res.json(jsonTestData);
+      const imageUrls = jsonTestData.images_results.map((result: any) => result.thumbnail); //result.original is the original image
+      res.json(imageUrls); //testing just returning image preview
       console.log("Serving test data instead of real API.");
     } else {
       // Call the real API

@@ -30,15 +30,16 @@ function SearchFunction({ query, setQuery }: SearchFunctionProps) {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
+    <div className="flex flex-col gap-4 items-center justify-between">
+      <h1 className="text-4xl">Enter your vision</h1>
+      <form className="flex gap-4" onSubmit={handleSubmit}>
+        <input className="bg-base-300 rounded-md"
           type="text"
           placeholder="Search..."
           value={inputValue} // Display the local input value
           onChange={handleChange} // Update local state while typing
         />
-        <button type="submit">Submit</button>
+        <button className="btn btn-primary" type="submit">Submit</button>
       </form>
       {errorMessage && <p>{errorMessage}</p>} {/* Display error message if present */}
     </div>

@@ -10,15 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.13",
     "arg": "^5.0.2",
     "axios": "^1.8.2",
     "cors": "^2.8.5",
+    "daisyui": "^5.0.2",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "node-fetch": "^3.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "serpapi": "^2.1.0",
+    "tailwindcss": "^4.0.13",
     "tsx": "^4.19.3"
   },
   "devDependencies": {
